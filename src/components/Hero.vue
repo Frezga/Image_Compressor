@@ -30,7 +30,7 @@ import { RouterLink } from 'vue-router'
   height: 100vh;
   background-image: url('@/assets/abstract.png');
   background-repeat: no-repeat;
-  background-position: left 3px top 10px; /* ubah bagian ini */
+  background-position: left 3px top 10px;
   background-size: 1024px auto;
   display: flex;
   justify-content: center;
@@ -54,9 +54,8 @@ import { RouterLink } from 'vue-router'
   font-size: 5rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: 800;
-  /* Tambah lagi margin-top untuk menggeser 'Welcome' lebih jauh ke bawah.
-     Coba naikkan dari 12rem menjadi 14rem atau 15rem. */
-  margin-top: 14rem; /* <-- Sesuaikan nilai ini sesuai keinginanmu */
+
+  margin-top: 14rem;
   margin-bottom: 0;
 }
 
@@ -70,23 +69,20 @@ import { RouterLink } from 'vue-router'
 }
 
 .subtitle {
-  /* Ini untuk "to" */
   font-size: 3rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   margin-top: 0rem;
-  /* Biarkan margin-bottom ini 0 atau sangat kecil */
+
   margin-bottom: 0rem;
   color: #fff;
 }
 
 .subtitle2 {
-  /* Ini untuk "Image Compressor" */
   font-size: 3rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
-  /* Gunakan margin-top negatif yang lebih besar untuk mendekatkan ke "to" */
-  margin-top: -1.5rem; /* <-- Coba nilai ini, atau -2rem jika ingin lebih dekat lagi */
+  margin-top: -1.5rem;
   margin-bottom: 2rem;
   color: #fff;
 }
@@ -99,7 +95,6 @@ import { RouterLink } from 'vue-router'
   color: #eaeaea;
   max-width: 80%;
   margin-bottom: 5rem;
-  /* Sesuaikan margin-top ini jika pergeseran 'Welcome' terlalu mempengaruhi posisi deskripsi */
   margin-top: 1rem;
   margin-left: 7rem;
   line-height: 1.6;
