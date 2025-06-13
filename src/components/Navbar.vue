@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar" data-aos="slide-down" data-aos-duration="600" data-aos-delay="950">
     <RouterLink to="/about-project" class="nav-link">About Project</RouterLink>
     <RouterLink to="/about-us" class="nav-link">About Us</RouterLink>
   </nav>

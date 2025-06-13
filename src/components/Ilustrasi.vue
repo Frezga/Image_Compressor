@@ -6,13 +6,12 @@
     class="abstract-img"
     data-aos="slide-right"
     data-aos-duration="1200"
+    data-aos-delay="1000"
     data-aos-once="true"
   />
 </template>
 
-<script setup>
-// Tidak perlu script khusus
-</script>
+<script setup></script>
 
 <style scoped>
 .abstract-img {
