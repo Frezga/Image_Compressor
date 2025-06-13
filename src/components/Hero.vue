@@ -4,10 +4,9 @@
     <div class="hero-container">
       <div class="hero-content" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1200">
         <h1 class="main-title">
-          <span class="highlight">Welcome</span>
+          <span class="highlight">Welcome to,</span>
         </h1>
-        <h2 class="subtitle">to</h2>
-        <h3 class="subtitle2">Image Compressor</h3>
+        <h2 class="subtitle">Image Compressor</h2>
         <p class="description">
           Project ini bertujuan untuk mengompresi gambar sesuai dengan keinginan user. User bisa
           membaca panduan cara menjalankan fungsi ini dengan melihat
@@ -30,6 +29,8 @@ import Ilustrasi from './Ilustrasi.vue'
 .hero {
   width: 100%;
   display: flex;
+  min-height: 100vh;
+  padding-bottom: 15rem; /* kasih ruang buat transisi */
   background: transparent;
   justify-content: center;
   align-items: center;
@@ -49,10 +50,8 @@ import Ilustrasi from './Ilustrasi.vue'
 }
 
 .main-title {
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 800;
-
   margin-top: 14rem;
   margin-bottom: 0;
 }
@@ -60,14 +59,15 @@ import Ilustrasi from './Ilustrasi.vue'
 .highlight {
   background: rgba(164, 232, 232, 0.25);
   border-radius: 35px;
-  padding: 10px 20px;
+  padding: 1px 20px;
+  font-weight: bold;
   color: #fff;
   backdrop-filter: blur(2.2px);
   border: 1px solid rgba(204, 216, 216, 0.56);
 }
 
 .subtitle {
-  font-size: 3rem;
+  font-size: 6rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: bold;
   margin-top: 0rem;

@@ -24,7 +24,8 @@ AOS.init()
   color: #2c3e50;
 }
 
-body {
+body,
+html {
   margin: 0;
   font-family:
     sans-serif,
