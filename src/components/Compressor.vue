@@ -17,7 +17,7 @@
     </div>
     <div class="slider-action-row">
       <Slider v-model="quality" :min="1" :max="100" />
-      <button class="result-btn">Compress &gt;&gt;&gt;</button>
+      <router-link to="/result" class="result-btn">Compress &gt;&gt;&gt;</router-link>
     </div>
   </section>
 </template>
@@ -119,6 +119,7 @@ function onFileChange(e) {
     box-shadow 0.25s,
     background 0.2s,
     border-color 0.2s;
+  text-decoration: none;
 }
 
 .result-btn:hover {
