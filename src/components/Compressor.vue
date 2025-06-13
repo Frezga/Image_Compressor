@@ -1,8 +1,10 @@
 <template>
   <section class="compressor-section">
     <Ilustrasi2 />
-    <h2 class="compressor-title">Insert Your Pict</h2>
-    <div class="upload-container" @click="triggerFileInput">
+    <h2 class="compressor-title" data-aos="fade-right" data-aos-duration="900">
+      Insert your picture
+    </h2>
+    <div class="upload-container" @click="triggerFileInput" data-aos="fade-right">
       <input
         ref="fileInput"
         type="file"
@@ -13,18 +15,17 @@
       <img src="@/assets/picture_logo.svg" alt="logo" class="picture-logo" />
       <span class="no-file">{{ fileName || 'No choosen file' }}</span>
     </div>
-    <div class="slider-section">
-      <div class="slider-label">{{ quality }}%</div>
-      <input type="range" min="1" max="100" v-model="quality" class="slider" />
+    <div class="slider-action-row">
+      <Slider v-model="quality" :min="1" :max="100" />
+      <button class="result-btn">Compress &gt;&gt;&gt;</button>
     </div>
-    <button class="result-btn">Result &gt;&gt;&gt;</button>
-    <slot />
   </section>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import Ilustrasi2 from './Ilustrasi2.vue'
+import Slider from './Slider.vue'
 
 const fileInput = ref(null)
 const fileName = ref('')
@@ -94,45 +95,37 @@ function onFileChange(e) {
   font-weight: 600;
 }
 
-.slider-section {
+.slider-action-row {
   display: flex;
-  padding-left: 11rem;
   align-items: center;
-  margin: 2rem 0 3rem 0;
-}
-
-.slider-label {
-  background: #1de9b6;
-  color: #222;
-  font-weight: bold;
-  border-radius: 6px;
-  padding: 0.3rem 0.8rem;
-  margin-right: 1rem;
-  font-size: 1.1rem;
-  position: relative;
-  top: -10px;
-}
-
-.slider {
-  width: 350px;
-  accent-color: #1de9b6;
-  height: 6px;
-  border-radius: 4px;
+  gap: 2rem; /* jarak antara slider dan tombol */
+  margin-bottom: 2rem;
 }
 
 .result-btn {
-  margin-top: 1.5rem;
-  background: none;
-  border: none;
+  margin-top: 0;
+  padding: 0.7rem 2.2rem;
+  background: linear-gradient(90deg, rgba(30, 233, 182, 0.18) 0%, rgba(95, 110, 228, 0.18) 100%);
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 12px 0 rgba(30, 233, 182, 0.1);
   cursor: pointer;
-  transition: color 0.2s;
+  transition:
+    box-shadow 0.25s,
+    background 0.2s,
+    border-color 0.2s;
 }
 
 .result-btn:hover {
-  color: #1de9b6;
+  box-shadow:
+    0 0 24px 4px rgba(95, 110, 228, 0.25),
+    0 0 8px 2px rgba(30, 233, 182, 0.18);
+  border-color: #5f6ee4;
+  background: linear-gradient(90deg, rgba(95, 110, 228, 0.28) 0%, rgba(30, 233, 182, 0.28) 100%);
 }
 </style>

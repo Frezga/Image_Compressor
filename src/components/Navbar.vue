@@ -1,58 +1,70 @@
 <template>
-  <nav class="navbar" data-aos="slide-down" data-aos-duration="600" data-aos-delay="950">
-    <RouterLink to="/about-project" class="nav-link">About Project</RouterLink>
-    <RouterLink to="/about-us" class="nav-link">About Us</RouterLink>
+  <nav class="main-navbar" data-aos="fade-down" data-aos-duration="1000">
+    <div class="nav-glassy-group">
+      <a href="#about-project" class="nav-link">About Project</a>
+      <a href="#about-us" class="nav-link">About Us</a>
+    </div>
   </nav>
 </template>
+
 <style scoped>
-/* Pastikan properti .navbar tetap seperti sebelumnya */
-.navbar {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100; /* Pastikan navbar di atas konten lain */
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 0;
+.main-navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 1.5rem 0;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
 
-  /* Glassy Effect */
-  background-color: rgba(34, 151, 153, 0.08); /* Dasar biru kehijauan yang sangat transparan */
-  backdrop-filter: blur(15px); /* Efek buram yang lebih kuat untuk kesan kaca */
-
-  /* Box-shadow untuk kesan "terbang" dan blue glow */
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.1),
-    0 0 10px rgba(34, 151, 153, 0.4);
+.nav-glassy-group {
+  display: flex;
+  gap: 2.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.13);
+  border-radius: 40px;
+  padding: 0.2rem 1.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 24px 0 rgba(160, 132, 232, 0.08);
 }
 
 .nav-link {
   color: #fff;
-  font-family: 'Helvetica', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 500;
   text-decoration: none;
-  margin: 0 10rem;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  background-color: transparent;
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-
   transition:
-    background-image 0.4s ease-in-out,
-    background-color 0.4s ease-in-out,
-    color 0.4s ease-in-out,
-    transform 0.2s ease-in-out,
-    box-shadow 0.4s ease-in-out;
+    color 0.2s,
+    background 0.2s,
+    box-shadow 0.2s;
+  padding: 0.7rem 2.2rem;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-/* Efek hover untuk nav-link - Fokus pada perubahan ini */
-.nav-link:hover {
-  /* Gradient biru yang lebih gelap/soft */
-  background-image: linear-gradient(to right, #229799, #4a69bd, #2c3e50);
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow:
-    0 5px 20px rgba(44, 62, 80, 0.4),
-    0 0 10px rgba(34, 151, 153, 1);
+.nav-link::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(90deg, rgba(95, 110, 228, 0.18) 0%, rgba(30, 233, 182, 0.13) 100%);
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: -1;
+  backdrop-filter: blur(6px);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #f6f6f6; /* biru/ungu sesuai tema */
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+  opacity: 1;
 }
 </style>

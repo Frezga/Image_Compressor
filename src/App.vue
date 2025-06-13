@@ -10,7 +10,6 @@ AOS.init()
 <template>
   <Navbar />
   <RouterView />
-  <Compressor />
 </template>
 
 <style>
