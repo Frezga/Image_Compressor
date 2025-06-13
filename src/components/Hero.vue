@@ -2,10 +2,10 @@
   <section id="home" class="hero">
     <ilustrasi />
     <div class="hero-container">
+      <div class="welcome" data-aos="fade-in" data-aos-duration="600" data-aos-delay="1000">
+        <AnimationIntro />
+      </div>
       <div class="hero-content" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1200">
-        <h1 class="main-title">
-          <span class="highlight">Welcome to,</span>
-        </h1>
         <h2 class="subtitle">Image Compressor</h2>
         <p class="description">
           Project ini bertujuan untuk mengompresi gambar sesuai dengan keinginan user. User bisa
@@ -23,6 +23,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import Ilustrasi from './Ilustrasi.vue'
+import AnimationIntro from './AnimationIntro.vue'
 </script>
 
 <style scoped>
@@ -39,6 +40,14 @@ import Ilustrasi from './Ilustrasi.vue'
   z-index: 1;
 }
 
+.welcome {
+  display: flex;
+  padding-top: 0;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 24rem;
+  text-align: center;
+}
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -47,23 +56,6 @@ import Ilustrasi from './Ilustrasi.vue'
   text-align: center;
   z-index: 2;
   margin: auto;
-}
-
-.main-title {
-  font-size: 5rem;
-  font-family: 'DM Sans', sans-serif;
-  margin-top: 14rem;
-  margin-bottom: 0;
-}
-
-.highlight {
-  background: rgba(164, 232, 232, 0.25);
-  border-radius: 35px;
-  padding: 1px 20px;
-  font-weight: bold;
-  color: #fff;
-  backdrop-filter: blur(2.2px);
-  border: 1px solid rgba(204, 216, 216, 0.56);
 }
 
 .subtitle {
