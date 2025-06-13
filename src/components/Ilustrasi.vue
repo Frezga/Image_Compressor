@@ -1,0 +1,29 @@
+<!-- filepath: d:\Image_Compressor\src\components\Ilustrasi.vue -->
+<template>
+  <img
+    src="@/assets/abstract.png"
+    alt="Abstract"
+    class="abstract-img"
+    data-aos="slide-right"
+    data-aos-duration="1200"
+    data-aos-once="true"
+  />
+</template>
+
+<script setup>
+// Tidak perlu script khusus
+</script>
+
+<style scoped>
+.abstract-img {
+  position: absolute;
+  left: 3px;
+  top: 10px;
+  width: 1024px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+  user-select: none;
+}
+</style>

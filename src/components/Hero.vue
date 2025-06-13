@@ -1,7 +1,8 @@
 <template>
-  <section id="hero" class="hero">
+  <section id="home" class="hero">
+    <ilustrasi />
     <div class="hero-container">
-      <div class="hero-content">
+      <div class="hero-content" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1200">
         <h1 class="main-title">
           <span class="highlight">Welcome</span>
         </h1>
@@ -22,17 +23,14 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import Ilustrasi from './Ilustrasi.vue'
 </script>
 
 <style scoped>
 .hero {
   width: 100%;
-  height: 100vh;
-  background-image: url('@/assets/abstract.png');
-  background-repeat: no-repeat;
-  background-position: left 3px top 10px;
-  background-size: 1024px auto;
   display: flex;
+  background: transparent;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -51,7 +49,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .main-title {
-  font-size: 5rem;
+  font-size: 6rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: 800;
 
@@ -88,7 +86,7 @@ import { RouterLink } from 'vue-router'
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: left;
   padding-top: 0px;
   padding-left: 100px;

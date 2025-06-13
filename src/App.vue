@@ -1,6 +1,9 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue'
 import { RouterView } from 'vue-router'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+AOS.init()
 </script>
 
 <template>
@@ -36,6 +39,5 @@ body {
     #229799 99%,
     #021420 100%
   );
-  color: white;
 }
 </style>
