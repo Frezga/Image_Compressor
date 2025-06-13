@@ -3,35 +3,37 @@
     <div class="result-illustration">
       <Ilustrasi />
     </div>
-    <div
-      class="container"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="1200"
-      data-aos-once="true"
-    >
-      <div class="result-row">
-        <div class="result-col">
-          <div class="result-title">Before</div>
-          <div class="result-image-box">
-            <img src="@/assets/picture_logo.svg" alt="before" class="result-img" />
+    <div class="result-content">
+      <div class="container">
+        <div
+          class="result-row"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="1200"
+          data-aos-once="true"
+        >
+          <div class="result-col">
+            <div class="result-title">Before</div>
+            <div class="result-image-box">
+              <img src="@/assets/picture_logo.svg" alt="before" class="result-img" />
+            </div>
+          </div>
+          <div class="result-col">
+            <div class="result-title">After</div>
+            <div class="result-image-box">
+              <img src="@/assets/picture_logo.svg" alt="after" class="result-img" />
+            </div>
           </div>
         </div>
-        <div class="result-col">
-          <div class="result-title">After</div>
-          <div class="result-image-box">
-            <img src="@/assets/picture_logo.svg" alt="after" class="result-img" />
+        <div class="result-info-row">
+          <div class="result-info">
+            <div>Image different percentage:</div>
+            <div>Image compression time:</div>
           </div>
+          <button class="download-btn">Download</button>
         </div>
+        <router-link to="/" class="back-home-link">Back to homepage &gt;&gt;&gt;</router-link>
       </div>
-      <div class="result-info-row">
-        <div class="result-info">
-          <div>Image different percentage:</div>
-          <div>Image compression time:</div>
-        </div>
-        <button class="download-btn">Download</button>
-      </div>
-      <router-link to="/" class="back-home-link">Back to homepage &gt;&gt;&gt;</router-link>
     </div>
   </section>
 </template>
@@ -51,8 +53,16 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 .result-illustration {
   position: absolute;
   left: 0;
-  top: -40px;
+  top: -110px; /* geser ke atas */
   z-index: 1;
+  width: 45vw;
+  height: 100vh;
+  max-width: 45vw;
+  max-height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  box-sizing: border-box;
+  display: block;
 }
 
 .container {
