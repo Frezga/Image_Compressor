@@ -36,5 +36,20 @@ body {
 html,
 body,
 #app {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    138deg,
+    #021420 19%,
+    #052f3a 43%,
+    #042a49 59%,
+    #0b3d5f 86%,
+    #176b87 99%,
+    #229799 99%,
+    #021420 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   overflow-x: hidden;
 }

@@ -30,15 +30,5 @@ html {
   font-family:
     sans-serif,
     DM Sans;
-  background: linear-gradient(
-    138deg,
-    #021420 19%,
-    #052f3a 43%,
-    #042a49 59%,
-    #0b3d5f 86%,
-    #176b87 99%,
-    #229799 99%,
-    #021420 100%
-  );
 }
 </style>

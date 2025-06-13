@@ -17,10 +17,9 @@ onMounted(() => {
 
 <style scoped>
 .main-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: 'DM Sans', sans-serif;
   margin-top: 14rem;
-  margin-left: 0.9rem;
   text-align: left;
   margin-bottom: 0;
   background: rgba(164, 232, 232, 0.25);

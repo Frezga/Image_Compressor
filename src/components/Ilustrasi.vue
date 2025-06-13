@@ -18,7 +18,7 @@
   position: absolute;
   left: 3px;
   top: 10px;
-  width: 1024px;
+  width: 750px;
   height: auto;
   z-index: 1;
   pointer-events: none;
