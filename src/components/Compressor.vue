@@ -1,24 +1,4 @@
-<template>
-  <section id="home" class="hero">
-    <Ilustrasi2 />
-    <div class="hero-container">
-      <div class="welcome" data-aos="fade-in" data-aos-duration="600" data-aos-delay="1000">
-        <AnimationIntro />
-      </div>
-      <div class="hero-content" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1200">
-        <h2 class="subtitle">Image Compressor</h2>
-        <p class="description">
-          Project ini bertujuan untuk mengompresi gambar sesuai dengan keinginan user. User bisa
-          membaca panduan cara menjalankan fungsi ini dengan melihat
-          <RouterLink to="/about-project" class="link">about project</RouterLink> terlebih dahulu
-          atau cukup ikuti semua alur yang sudah disediakan. Selain itu, User juga bisa melihat
-          developer pada <RouterLink to="/about-us" class="link">about us</RouterLink> di atas.
-        </p>
-        <p class="scroll-text">scroll down to continue</p>
-      </div>
-    </div>
-  </section>
-</template>
+<template></template>
 
 <script setup>
 import { RouterLink } from 'vue-router'

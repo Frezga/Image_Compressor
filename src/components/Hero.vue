@@ -30,7 +30,6 @@ import AnimationIntro from './AnimationIntro.vue'
 .hero {
   width: 100%;
   display: flex;
-  min-height: 100vh;
   padding-bottom: 20rem; /* kasih ruang buat transisi */
   background: transparent;
   justify-content: center;
