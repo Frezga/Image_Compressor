@@ -31,7 +31,7 @@ import AnimationIntro from './AnimationIntro.vue'
   width: 100%;
   display: flex;
   min-height: 100vh;
-  padding-bottom: 15rem; /* kasih ruang buat transisi */
+  padding-bottom: 20rem; /* kasih ruang buat transisi */
   background: transparent;
   justify-content: center;
   align-items: center;
