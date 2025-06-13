@@ -5,5 +5,4 @@ import hero from '@/components/Hero.vue'
 
 <template>
   <hero />
-  <Compressor />
 </template>

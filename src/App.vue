@@ -3,12 +3,14 @@ import Navbar from '@/components/Navbar.vue'
 import { RouterView } from 'vue-router'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Compressor from './components/Compressor.vue'
 AOS.init()
 </script>
 
 <template>
   <Navbar />
   <RouterView />
+  <Compressor />
 </template>
 
 <style>

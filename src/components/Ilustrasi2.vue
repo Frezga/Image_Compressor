@@ -15,10 +15,9 @@
 <style scoped>
 .abstract-img {
   position: absolute;
-  right: 0px;
+  right: 3px;
   top: 10px;
-  width: 1024px;
-  max-width: 100vw; /* Tambahkan ini */
+  width: 750px;
   height: auto;
   z-index: 1;
   pointer-events: none;
