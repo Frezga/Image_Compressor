@@ -1,3 +1,5 @@
+@import './variables.css';
+
 *,
 *::before,
 *::after {
@@ -52,4 +54,24 @@ body,
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--padding-container);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section {
+  padding: var(--padding-section) 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

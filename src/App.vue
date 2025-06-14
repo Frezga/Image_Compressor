@@ -32,3 +32,16 @@ html {
     DM Sans;
 }
 </style>
+
+<script>
+import AOS from 'aos'
+
+export default {
+  mounted() {
+    AOS.refresh() // atau AOS.init() jika pertama kali
+  },
+  activated() {
+    AOS.refresh()
+  },
+}
+</script>

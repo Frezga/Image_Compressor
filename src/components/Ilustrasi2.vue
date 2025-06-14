@@ -6,7 +6,7 @@
     class="abstract-img"
     data-aos="slide-left"
     data-aos-duration="1000"
-    data-aos-delay="0"
+    data-aos-delay="10"
   />
 </template>
 
@@ -16,7 +16,7 @@
 .abstract-img {
   position: absolute;
   right: 3px;
-  top: 10px;
+  bottom: 20px;
   width: 750px;
   height: auto;
   z-index: 1;
