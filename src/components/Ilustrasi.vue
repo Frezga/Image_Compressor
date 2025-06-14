@@ -5,8 +5,8 @@
     alt="Abstract"
     class="abstract-img"
     data-aos="slide-right"
-    data-aos-duration="1200"
-    data-aos-delay="1000"
+    data-aos-duration="1000"
+    data-aos-delay="500"
     data-aos-once="true"
   />
 </template>

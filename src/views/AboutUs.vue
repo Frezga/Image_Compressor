@@ -3,7 +3,7 @@
     <div class="about-illustration">
       <Ilustrasi />
     </div>
-    <div class="about-glass-box">
+    <div class="about-glass-box" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
       <h2 class="about-title">About Us</h2>
       <p>
         Kami adalah kelompok dengan nomor urut ke sepuluh (berdasarkan urutan pada <span class="highlight">spreadsheet</span> yang ada di google classroom)
@@ -27,92 +27,4 @@
 import Ilustrasi from '@/components/Ilustrasi.vue'
 </script>
 
-<style scoped>
-.about-section {
-  min-height: 100vh;
-  width: 100vw;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background: transparent;
-}
-
-.about-illustration {
-  position: absolute;
-  left: 0;
-  top: -40px; /* geser ke atas */
-  z-index: 1;
-  width: 45vw;
-  height: 100vh;
-  max-width: 45vw;
-  max-height: 100vh;
-  overflow: hidden;
-  pointer-events: none;
-  box-sizing: border-box;
-  display: block;
-}
-
-.about-glass-box {
-  margin-top: 4rem;
-  margin-left: 8rem;
-  max-width: 800px;
-  width: 90vw;
-  background: rgba(30, 40, 60, 0.28);
-  border-radius: 28px;
-  box-shadow:
-    0 8px 40px 0 rgba(30, 233, 182, 0.13),
-    0 0 32px 4px rgba(95, 110, 228, 0.10);
-  backdrop-filter: blur(16px);
-  border: 2px solid rgba(255,255,255,0.18);
-  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
-  color: #f3f6fa;
-  font-size: 1.22rem;
-  font-family: 'DM Sans', sans-serif;
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  filter: drop-shadow(0 0 16px #1de9b6aa);
-}
-
-.about-title {
-  font-size: 2.3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  color: #fff;
-  text-shadow: 0 0 8px #1de9b6cc, 0 2px 8px #5f6ee4aa;
-  letter-spacing: 1px;
-}
-
-.about-glass-box p {
-  margin-bottom: 1.1rem;
-  line-height: 1.7;
-  color: #e0f2f1;
-  text-shadow: 0 0 4px #1de9b633;
-}
-
-.about-glass-box ul {
-  margin: 0.5rem 0 0.5rem 1.5rem;
-  padding: 0;
-  color: #b2f7ef;
-  font-size: 1.1rem;
-  list-style: none;
-}
-
-.about-glass-box li {
-  margin-bottom: 0.3rem;
-  text-shadow: 0 0 4px #1de9b633;
-}
-
-.highlight {
-  color: #6ee4e4;
-  font-weight: 500;
-}
-
-@media (max-width: 900px) {
-  .about-glass-box {
-    margin-left: 2rem;
-    padding: 1.2rem;
-  }
-}
-</style>
+<style src="@/assets/aboutpage.css"></style>

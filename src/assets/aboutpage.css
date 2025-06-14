@@ -1,0 +1,84 @@
+.about-section {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.about-illustration {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  transform: translateY(-60%); /* sejajarkan tengah vertikal */
+  z-index: 1;
+  width: 45vw;
+  max-width: 45vw;
+  height: 80vh;
+  max-height: 80vh;
+  overflow: show;
+  pointer-events: none;
+  box-sizing: border-box;
+  display: block;
+}
+
+.about-glass-box {
+  max-width: 1200px;
+  width: 98vw;
+  min-height: 500px;
+  padding: 48px 60px;
+  background: rgba(30, 40, 60, 0.28);
+  border-radius: 28px;
+  box-shadow:
+    0 8px 40px 0 rgba(30, 233, 182, 0.13),
+    0 0 32px 4px rgba(95, 110, 228, 0.1);
+  backdrop-filter: blur(16px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  padding: 2.8rem 2.8rem 2.8rem 2.8rem;
+  color: #f3f6fa;
+  font-size: 1.22rem;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  filter: drop-shadow(0 0 16px #1de9b6aa);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.about-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-shadow:
+    0 0 8px #1de9b6cc,
+    0 2px 8px #5f6ee4aa;
+  letter-spacing: 1px;
+}
+
+.about-glass-box p {
+  margin-bottom: 1.1rem;
+  line-height: 1.7;
+  color: #e0f2f1;
+  text-shadow: 0 0 4px #1de9b633;
+}
+.about-glass-box ul {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+  padding: 0;
+  color: #b2f7ef;
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+.about-glass-box li {
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 4px #1de9b633;
+}
+
+.highlight {
+  color: #6ee4e4;
+  font-weight: 500;
+}

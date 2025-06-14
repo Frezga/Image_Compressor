@@ -25,14 +25,26 @@
             </div>
           </div>
         </div>
-        <div class="result-info-row">
+        <div
+          class="result-info-row"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="1300"
+        >
           <div class="result-info">
             <div>Image different percentage:</div>
             <div>Image compression time:</div>
           </div>
           <button class="download-btn">Download</button>
         </div>
-        <router-link to="/" class="back-home-link">Back to homepage &gt;&gt;&gt;</router-link>
+        <router-link
+          to="/"
+          class="back-home-link"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          data-aos-delay="1350"
+          >Back to homepage &gt;&gt;&gt;</router-link
+        >
       </div>
     </div>
   </section>
@@ -53,13 +65,14 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 .result-illustration {
   position: absolute;
   left: 0;
-  top: -110px; /* geser ke atas */
+  top: 40%;
+  transform: translateY(-60%); /* sejajarkan tengah vertikal */
   z-index: 1;
   width: 45vw;
-  height: 100vh;
   max-width: 45vw;
-  max-height: 100vh;
-  overflow: hidden;
+  height: 80vh;
+  max-height: 80vh;
+  overflow: show;
   pointer-events: none;
   box-sizing: border-box;
   display: block;
@@ -118,7 +131,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
-  margin-left: 10rem;
+  margin-left: 13rem;
   margin-bottom: 2rem;
   width: 100%;
   box-sizing: border-box;
@@ -127,12 +140,12 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 }
 
 .result-info {
-  color: #aebdc2;
-  font-size: 1.15rem;
+  color: #ffffff;
+  font-size: 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .result-box {
