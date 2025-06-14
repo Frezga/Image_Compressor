@@ -2,6 +2,7 @@
   "name": "image-compressor-project",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://Frezga.github.io/Image_Compressor/",
   "type": "module",
   "scripts": {
     "dev": "vite",
