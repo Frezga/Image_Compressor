@@ -17,7 +17,7 @@
     </div>
     <div class="slider-action-row">
       <Slider v-model="quality" :min="1" :max="100" />
-      <router-link to="/result" class="result-btn">Compress &gt;&gt;&gt;</router-link>
+      <router-link to="/result" class="compress-btn">Compress &gt;&gt;&gt;</router-link>
     </div>
   </section>
 </template>
@@ -102,7 +102,7 @@ function onFileChange(e) {
   margin-bottom: 2rem;
 }
 
-.result-btn {
+.compress-btn {
   margin-top: 0;
   padding: 0.7rem 2.2rem;
   background: linear-gradient(90deg, rgba(30, 233, 182, 0.18) 0%, rgba(95, 110, 228, 0.18) 100%);
@@ -122,7 +122,7 @@ function onFileChange(e) {
   text-decoration: none;
 }
 
-.result-btn:hover {
+.compress-btn:hover {
   box-shadow:
     0 0 24px 4px rgba(95, 110, 228, 0.25),
     0 0 8px 2px rgba(30, 233, 182, 0.18);
