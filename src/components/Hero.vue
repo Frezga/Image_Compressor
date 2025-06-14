@@ -89,7 +89,7 @@ function scrollToCompressor() {
   margin-bottom: 0rem;
   color: #fff;
   text-align: left;
-  white-space: nowrap; /* agar tidak pindah baris */
+  white-space: nowrap;
 }
 
 .scroll-btn {

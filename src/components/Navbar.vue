@@ -54,7 +54,7 @@ const showHomeBtn = computed(() => ['/about-us', '/about-project'].includes(rout
 
 .navbar-right {
   position: absolute;
-  right: 15rem; /* Ubah jarak dari kanan di sini */
+  right: 15rem;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -102,12 +102,12 @@ const showHomeBtn = computed(() => ['/about-us', '/about-project'].includes(rout
   align-items: center;
   justify-content: center;
   background: rgba(30, 40, 60, 0.18);
-  border-radius: 18px; /* Kotak dengan sudut rounded */
+  border-radius: 18px;
   padding: 1rem;
   box-shadow:
     0 4px 24px 0 rgba(30, 233, 182, 0.1),
     0 1.5px 8px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.55); /* Outline lebih terang */
+  border: 1px solid rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
   transition:
     background 0.18s,
@@ -126,11 +126,11 @@ const showHomeBtn = computed(() => ['/about-us', '/about-project'].includes(rout
   width: 50px;
   height: 50px;
   display: block;
-  filter: brightness(0) invert(1) drop-shadow(0 0 2px #fff8); /* Putih sebelum hover */
+  filter: brightness(0) invert(1) drop-shadow(0 0 2px #fff8);
   transition: filter 0.18s;
 }
 
 .home-link:hover .home-icon {
-  filter: brightness(0) invert(1) drop-shadow(0 0 4px #1ee9b6cc); /* Hitam saat hover */
+  filter: brightness(0) invert(1) drop-shadow(0 0 4px #1ee9b6cc);
 }
 </style>

@@ -1,4 +1,3 @@
-<!-- filepath: d:\Image_Compressor\src\components\Ilustrasi.vue -->
 <template>
   <img
     src="@/assets/abstract.png"

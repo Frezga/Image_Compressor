@@ -66,7 +66,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   position: absolute;
   left: 0;
   top: 40%;
-  transform: translateY(-60%); /* sejajarkan tengah vertikal */
+  transform: translateY(-60%);
   z-index: 1;
   width: 45vw;
   max-width: 45vw;
@@ -83,7 +83,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  padding-left: 40px; /* Atur sesuai kebutuhan */
+  padding-left: 40px;
 }
 
 .result-row {
@@ -93,7 +93,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   margin-bottom: 32px;
   width: 100%;
   box-sizing: border-box;
-  margin-left: 40px; /* Atur sesuai kebutuhan, misal 40px */
+  margin-left: 40px;
 }
 
 .result-col {
@@ -136,7 +136,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   width: 100%;
   box-sizing: border-box;
 
-  text-align: left; /* teks rata kiri */
+  text-align: left;
 }
 
 .result-info {
