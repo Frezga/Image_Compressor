@@ -1,7 +1,7 @@
 <template>
   <section class="compressor-section section flex-left">
+    <Ilustrasi2 />
     <div class="container">
-      <Ilustrasi2 />
       <h2 class="compressor-title" data-aos="fade-right" data-aos-duration="1000">
         Insert your picture
       </h2>
@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import Ilustrasi2 from './Ilustrasi2.vue'
 import Slider from './Slider.vue'
 
@@ -54,22 +54,37 @@ function onFileChange(e) {
   position: relative;
   min-height: 100vh;
   background: transparent;
-  padding-top: 4.5rem;
+  padding-top: 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px; /* Increased from 420px */
+  margin: 0 auto;
+  margin-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .compressor-title {
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   font-weight: bold;
+  margin-left: 1.3rem;
   margin-bottom: 2.5rem;
   text-align: left;
+  align-self: flex-start;
 }
 
 .upload-container {
   border: 2.5px dashed #cfd8dc;
-  border-radius: var(--radius-lg, 32px);
+  border-radius: 32px;
   width: 100%;
-  max-width: 720px;
-  height: 400px;
+  max-width: 600px; /* Increased */
+  height: 340px; /* Increased */
   margin-bottom: 2.5rem;
   background: transparent;
   display: flex;
@@ -79,8 +94,6 @@ function onFileChange(e) {
   cursor: pointer;
   position: relative;
   transition: border-color 0.2s;
-  margin-left: 0;
-  margin-right: auto;
 }
 
 .upload-container:hover {
@@ -92,46 +105,46 @@ function onFileChange(e) {
 }
 
 .picture-logo {
-  width: 140px;
-  margin-bottom: 1rem;
+  width: 110px; /* Increased */
+  margin-bottom: 1.2rem;
   opacity: 0.7;
 }
 
 .no-file {
   color: #7b8a8b;
-  font-size: 1.4rem;
+  font-size: 1.3rem; /* Increased */
   font-weight: 600;
 }
 
 .slider-action-row {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   margin-bottom: 2.5rem;
   justify-content: flex-start;
   width: 100%;
-  max-width: 720px;
-  margin-left: 0;
+  max-width: 600px;
+  margin-left: 32px;
   margin-right: auto;
   padding-left: 0;
 }
 
 .slider-component-class {
-  width: 65%;
-  min-width: 200px;
-  max-width: 500px;
+  width: 60%;
+  min-width: 120px;
+  max-width: 260px;
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
 .compress-btn {
-  padding: 1rem 1rem;
+  padding: 0.7rem 1.2rem;
   background: linear-gradient(120deg, rgba(29, 233, 182, 0.18) 0%, rgba(95, 110, 228, 0.18) 100%);
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: bold;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
-  border-radius: 24px;
+  border-radius: 18px;
   backdrop-filter: blur(10px) saturate(160%);
   box-shadow: 0 2px 16px 0 rgba(30, 233, 182, 0.08);
   cursor: pointer;
@@ -150,5 +163,48 @@ function onFileChange(e) {
   box-shadow:
     0 0 24px 4px var(--secondary, #5f6ee4),
     0 0 8px 2px var(--primary, #1de9b6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .compressor-section {
+    padding-top: 2rem;
+  }
+  .compressor-title {
+    font-size: 1.6rem;
+  }
+  .upload-container,
+  .slider-action-row {
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .compressor-section {
+    padding-top: 1rem;
+  }
+  .compressor-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .upload-container {
+    height: 180px;
+    border-radius: 18px;
+  }
+  .slider-action-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+  .slider-component-class {
+    width: 100%;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .compress-btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.7rem 0;
+  }
 }
 </style>
