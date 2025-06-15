@@ -147,7 +147,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 
 .result-info {
   color: #d2f6f6;
-  font-size: 1rem;
+  font-size: 1.3rem;
   display: flex;
   font-weight: bold;
   flex-direction: column;
@@ -157,13 +157,13 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 
 .result-download-btn {
   margin-top: 1px;
-  padding: 8px 18px;
+  padding: 10px 18px;
   border-radius: 16px;
   border: 2px solid #1de9b6;
   background: transparent;
   color: #fff;
   font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   cursor: pointer;
   transition:
     background 0.2s,
