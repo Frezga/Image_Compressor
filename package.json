@@ -14,8 +14,12 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
+    "clear": "^0.1.0",
+    "package_name": "^1.0.2",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-image-zoomer": "^2.4.4",
+    "vue-router": "^4.5.0",
+    "vue-twentytwenty": "^1.0.0-1"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",

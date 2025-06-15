@@ -45,7 +45,7 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   align-items: center;
   justify-content: center;
   background: transparent;
-  overflow-x: clip; /* ini yang penting */
+  overflow-x: clip;
 }
 
 .result-illustration {
@@ -64,11 +64,11 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 }
 
 .result-glass-box {
-  max-width: 1200px;
-  width: 98vw;
-  min-height: 500px;
-  padding: 48px 60px;
-  padding-top: 30px;
+  max-width: 1100px;
+  width: 95vw;
+  min-height: 450px;
+  padding: 48px 50px;
+  padding-top: 25px;
   background: rgba(12, 79, 121, 0.115);
   border-radius: 28px;
   box-shadow:
@@ -92,8 +92,8 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 .result-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 36px;
+  justify-content: center;
+  gap: 35px;
   width: 100%;
 }
 
@@ -102,27 +102,27 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  min-width: 320px;
-  max-width: 600px;
+  min-width: 280px;
+  max-width: 440px;
   position: relative;
 }
 
 .result-title {
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 1rem;
-  margin-left: 0.5rem;
+  margin-bottom: 0.6rem;
+  margin-left: 0.3rem;
 }
 
 .result-image-box {
   width: 100%;
-  min-width: 220px;
+  min-width: 120px;
   max-width: 100%;
-  min-height: 340px;
-  max-height: 340px;
+  min-height: 280px;
+  max-height: 280px;
   border: 2px dashed #fff;
-  border-radius: 24px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,39 +131,39 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 }
 
 .result-img {
-  width: 80px;
+  width: 48px;
   opacity: 0.7;
 }
 
 .result-info-area {
-  margin-top: 2.5rem; /* Ubah dari 1.5rem ke 2.5rem */
+  margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 14px;
+  gap: 8px;
   width: 100%;
-  padding-left: 0.5rem;
+  padding-left: 0.3rem;
 }
 
 .result-info {
   color: #d2f6f6;
-  font-size: 1.5rem;
+  font-size: 1rem;
   display: flex;
   font-weight: bold;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   text-align: left;
 }
 
 .result-download-btn {
   margin-top: 1px;
-  padding: 15px 36px;
-  border-radius: 24px;
+  padding: 8px 18px;
+  border-radius: 16px;
   border: 2px solid #1de9b6;
   background: transparent;
   color: #fff;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition:
     background 0.2s,
@@ -177,15 +177,15 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
 
 .back-home-btn {
   position: absolute;
-  right: 32px;
-  bottom: 32px;
+  right: 18px;
+  bottom: 18px;
   font-weight: bold;
-  padding: 12px 28px;
-  border-radius: 24px;
+  padding: 8px 18px;
+  border-radius: 16px;
   border: 2px solid #00e6e694;
   background: transparent;
   color: #fff;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   cursor: pointer;
   transition:
     background 0.5s,
@@ -199,7 +199,6 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   color: #1ee9b6;
 }
 
-/* Pastikan juga html dan body tidak ada margin/padding */
 :global(html),
 :global(body) {
   margin: 0;

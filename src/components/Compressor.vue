@@ -62,7 +62,7 @@ function onFileChange(e) {
 
 .container {
   width: 100%;
-  max-width: 700px; /* Increased from 420px */
+  max-width: 700px;
   margin: 0 auto;
   margin-left: 5rem;
   display: flex;
@@ -81,10 +81,10 @@ function onFileChange(e) {
 
 .upload-container {
   border: 2.5px dashed #cfd8dc;
-  border-radius: 32px;
+  border-radius: 10px;
   width: 100%;
-  max-width: 600px; /* Increased */
-  height: 340px; /* Increased */
+  max-width: 600px;
+  height: 340px;
   margin-bottom: 2.5rem;
   background: transparent;
   display: flex;
@@ -105,14 +105,14 @@ function onFileChange(e) {
 }
 
 .picture-logo {
-  width: 110px; /* Increased */
+  width: 110px;
   margin-bottom: 1.2rem;
   opacity: 0.7;
 }
 
 .no-file {
   color: #7b8a8b;
-  font-size: 1.3rem; /* Increased */
+  font-size: 1.3rem;
   font-weight: 600;
 }
 

@@ -25,7 +25,7 @@ svg {
   position: absolute;
   left: 3px;
   top: 10px;
-  width: 750px;
+  width: 650px;
   height: auto;
   z-index: 1;
   pointer-events: none;

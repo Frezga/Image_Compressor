@@ -16,8 +16,8 @@
 .abstract-img {
   position: absolute;
   right: 3px;
-  bottom: 20px;
-  width: 750px;
+  top: 10px;
+  width: 650px;
   height: auto;
   z-index: 1;
   pointer-events: none;

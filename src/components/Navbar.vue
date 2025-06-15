@@ -54,7 +54,7 @@ const showHomeBtn = computed(() => ['/about-us', '/about-project'].includes(rout
 
 .navbar-right {
   position: absolute;
-  right: 15rem;
+  right: 10rem;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -96,7 +96,6 @@ const showHomeBtn = computed(() => ['/about-us', '/about-project'].includes(rout
   color: #1ee9b6;
 }
 
-/* Home Button Style - Modern Minimalis */
 .home-link {
   display: flex;
   align-items: center;
@@ -107,30 +106,30 @@ const showHomeBtn = computed(() => ['/about-us', '/about-project'].includes(rout
   box-shadow:
     0 4px 24px 0 rgba(30, 233, 182, 0.1),
     0 1.5px 8px 0 rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(12px);
   transition:
     background 0.18s,
-    box-shadow 0.18s,
-    transform 0.12s;
+    border-color 0.22s,
+    transform 0.18s;
   outline: none;
 }
 
 .home-link:hover {
-  background: rgba(30, 233, 182, 0.18);
-  box-shadow: 0 0 24px 4px #1ee9b655;
-  transform: translateY(-2px) scale(1.08);
+  background: rgba(30, 233, 182, 0.09);
+  border-color: #1ee9b6;
+  transform: scale(1.08);
 }
 
 .home-icon {
   width: 50px;
   height: 50px;
   display: block;
-  filter: brightness(0) invert(1) drop-shadow(0 0 2px #fff8);
-  transition: filter 0.18s;
+  filter: brightness(0) invert(1);
+  transition: transform 0.22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .home-link:hover .home-icon {
-  filter: brightness(0) invert(1) drop-shadow(0 0 4px #1ee9b6cc);
+  transform: rotate(-10deg) scale(1.15);
 }
 </style>
