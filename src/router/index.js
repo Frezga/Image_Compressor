@@ -17,6 +17,14 @@ const router = createRouter({
       path: '/result',
       name: 'result',
       component: Result,
+      props: (route) => ({
+        original_filename: route.query.original_filename,
+        compressed_filename: route.query.compressed_filename,
+        original_size: route.query.original_size,
+        compressed_size: route.query.compressed_size,
+        execution_time: route.query.execution_time,
+        image_different_percentage: route.query.image_different_percentage,
+      }),
     },
     {
       path: '/about-project',

@@ -23,7 +23,7 @@
       </div>
       <div class="slider-action-row" data-aos="fade-right" data-aos-duration="900">
         <Slider v-model="quality" :min="1" :max="100" class="slider-component-class" />
-        <router-link to="/result" class="compress-btn">Compress &gt;&gt;&gt;</router-link>
+        <button class="compress-btn" @click="handleCompress">Compress &gt;&gt;&gt;</button>
       </div>
     </div>
   </section>
@@ -33,10 +33,13 @@
 import { ref } from 'vue'
 import Ilustrasi2 from './Ilustrasi2.vue'
 import Slider from './Slider.vue'
+import { useRouter } from 'vue-router'
 
 const fileInput = ref(null)
 const fileName = ref('')
 const quality = ref(1)
+const selectedFile = ref(null)
+const router = useRouter()
 
 function triggerFileInput() {
   fileInput.value.click()
@@ -45,6 +48,37 @@ function triggerFileInput() {
 function onFileChange(e) {
   const file = e.target.files[0]
   fileName.value = file ? file.name : ''
+  selectedFile.value = file
+}
+
+async function handleCompress(){
+  if(!selectedFile.value){
+    alert('silahkan memilih file terlebih dahulu!')
+    return
+  }
+  const formData = new FormData()
+  formData.append('file', selectedFile.value)
+  formData.append('quality', quality.value)
+
+  const response = await fetch('http://localhost:8000/upload-image', {
+    method: 'POST',
+    body: formData,
+  })
+
+  if(response && response.ok){
+    const result = await response.json()
+    router.push({
+      name: 'result',
+      query:{
+        original_filename: result.original_filename,
+        compressed_filename: result.compressed_filename,
+        original_size: result.original_size,
+        compressed_size: result.compressed_size,
+        execution_time: result.execution_time,
+        image_different_percentage: result.image_different_percentage,
+      }
+    })
+  }
 }
 </script>
 

@@ -9,21 +9,27 @@
         <div class="result-col">
           <div class="result-title">Before</div>
           <div class="result-image-box">
-            <img src="@/assets/picture_logo.svg" alt="before" class="result-img" />
+            <div class="result-img-wrapper">
+              <img :src="originalUrl" alt="before" class="result-img" />
+            </div>
+            <div class="result-size">size: {{ props.original_size }} kB</div>
           </div>
           <div class="result-info-area">
             <div class="result-info">
-              <div>Image different percentage:</div>
-              <div>Image compression time:</div>
+              <div>Image different percentage: {{ props.image_different_percentage }} %</div>
+              <div>Image compression time: {{ props.execution_time }} detik</div>
             </div>
-            <button class="result-download-btn">Download</button>
+            <button class="result-download-btn" @click="handleDownloading">Download</button>
           </div>
         </div>
         <!-- After -->
         <div class="result-col">
           <div class="result-title">After</div>
           <div class="result-image-box">
-            <img src="@/assets/picture_logo.svg" alt="after" class="result-img" />
+            <div class="result-img-wrapper">
+              <img :src="compressedUrl" alt="after" class="result-img" />
+            </div>
+            <div class="result-size">size: {{ props.compressed_size }} kB</div>
           </div>
         </div>
       </div>
@@ -34,6 +40,30 @@
 
 <script setup>
 import Ilustrasi from '@/components/Ilustrasi.vue'
+import pictureLogo from '@/assets/picture_logo.svg'
+
+const props = defineProps({
+  execution_time: [String, Number], // Define expected types
+  image_different_percentage: [String, Number],
+  original_filename: String,
+  compressed_filename: String,
+  original_size: [String, Number], // You might not need these if not displayed
+  compressed_size: [String, Number], // You might not need these if not displayed
+})
+
+const originalUrl = props.original_filename
+  ? `http://localhost:8000/uploads/${props.original_filename}`
+  : pictureLogo
+const compressedUrl = props.compressed_filename
+  ? `http://localhost:8000/compressed/${props.compressed_filename}`
+  : pictureLogo
+
+async function handleDownloading(){
+  if(props.compressed_filename){
+    window.open(`http://localhost:8000/compressed/${props.compressed_filename}`, '_blank')
+  }
+}
+
 </script>
 
 <style scoped>
@@ -124,15 +154,32 @@ import Ilustrasi from '@/components/Ilustrasi.vue'
   border: 2px dashed #fff;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background: transparent;
   margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.result-img-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 13px;
+}
+
+.result-size {
+  color: #d2f6f6;
+  font-size: 1rem;
+  margin-top: 8px;
+  text-align: center;
 }
 
 .result-img {
-  width: 48px;
-  opacity: 0.7;
+  width: 70%;
+  opacity: 2.9;
 }
 
 .result-info-area {
