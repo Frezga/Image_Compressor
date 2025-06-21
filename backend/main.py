@@ -87,7 +87,7 @@ async def uploadImage(
         "compressed_filename": os.path.basename(output_path_from_svd), 
         "compressed_size": compressed_size,
         "execution_time": execution_time,
-        "image_different_percentage": round(100 - (compressed_size / original_size) * 100, 2) if original_size else 0
+        "image_different_percentage": round((compressed_size / original_size) * 100)
     }
 
 #send the before and afer image compressed

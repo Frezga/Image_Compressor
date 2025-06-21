@@ -178,7 +178,7 @@ async function handleDownloading(){
 }
 
 .result-img {
-  width: 70%;
+  width: 140px;
   opacity: 2.9;
 }
 
