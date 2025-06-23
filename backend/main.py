@@ -12,7 +12,7 @@ import os
 import shutil
 
 sys.path.append(os.path.join(os.path.dirname(__file__), 'app'))
-import processing as SVD
+from app import processing as SVD
 
 def allowed_typeFile(filename):
     ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
