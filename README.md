@@ -9,7 +9,7 @@ Proyek ini adalah aplikasi web **kompresi gambar  berbasis  website** menggunaka
 - **Muhammad Akbar Kurniawan (L0124136)**
 - **Muhammad Ayman (L0124137)**
 
-## 🚀 Fitur Utama
+##  Fitur Utama
 
 - **Upload Gambar** Pengguna dapat mengunggah gambar untuk dikompresi.
 - **Atur Tingkatan Kompresi** Pengguna dapat mengatur tingkatan kompresi gambar.
@@ -18,7 +18,7 @@ Proyek ini adalah aplikasi web **kompresi gambar  berbasis  website** menggunaka
 
 ---
 
-## 🧠 Algoritma: Singular Value Decomposition (SVD)
+##  Algoritma: Singular Value Decomposition (SVD)
 
 - **Konversi ke Matriks:** Gambar diubah menjadi matriks numerik (grayscale atau RGB).
 - **Dekomposisi SVD:** Matriks gambar dipecah menjadi tiga matriks utama (U, Σ, V^T) menggunakan algoritma SVD.
@@ -27,7 +27,7 @@ Proyek ini adalah aplikasi web **kompresi gambar  berbasis  website** menggunaka
 
 ---
 
-## 🧰 Framework & Library
+##  Framework & Library
 
 - **Flask:** Backend web server.
 - **FastAPI** Framework  untuk membangun REST API backend.
@@ -58,7 +58,7 @@ Image_Compressor/
 
 ---
 
-## 🏃 Cara Menjalankan
+##  Cara Menjalankan
 
 1. **Siapkan environment:**
    ```bash
